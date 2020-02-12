@@ -1,0 +1,52 @@
+/*----------------------- header*/
+
+head {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font: 20px Montserrat, sans-serif;
+  line-height: 1.8;
+  color: #333;
+  display: block;
+  padding: 10px 20px 75px 20px;
+  
+
+}
+
+/*----------------------navigation bar*/
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-weight: normal;
+  font-size: 24px;
+}
+
+li {
+  float: left;
+}
+
+navbar-brand {
+  color: black;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+li a:hover {
+  background-color: #9FA8DA;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*---------------------end of navigation bar*/
