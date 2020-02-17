@@ -54,16 +54,14 @@ body {
 
 /*--------------------- itinerary carousel*/
 .itinerary-title {
-    position: absolute;
+    position: relative;
     color: #354b5e;
     top: 100px;
-    
-    
 }
 
 
 .container-itinerary {
-  position: absolute;
+  position: relative;
   height: 300px;
   width: 600px;
   
@@ -102,7 +100,7 @@ body {
 .title {
   color: #354b5e;
   font-weight: 300;
-  position: absolute;
+  position: relative;
   left: 20px;
   top: 15px;
 }
@@ -114,12 +112,13 @@ body {
 /* Quotes */
 
 .reviews .page-header {
+    position: relative;
     margin-bottom: 25px;
 }
 /* ----------------------------------------Footer */
 
 footer {
-    background-color: #354b5e;
+    background-color: #354b5e;git commit -m "-"
     color: #fafafa;
     min-height: 120px;
     margin: 0;
