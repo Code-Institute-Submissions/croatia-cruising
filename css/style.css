@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
+
 /*----------------------- header*/
 
 head {
@@ -14,39 +16,97 @@ body {
 
 }
 
-/*----------------------navigation bar*/
+/* Navbar */
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  font-weight: normal;
-  font-size: 24px;
+.navalert-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding-left: 0;
+    padding-right: 0;
 }
 
-li {
-  float: left;
+.navbar {
+    margin-bottom: 0;
+    width: 100%;
+    background-color: #354b5e;
+    border: 0;
 }
 
-navbar-brand {
-  color: black;
+.navbar .navbar-toggler {
+    border: 0;
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+.navbar .navbar-brand {
+    font-weight: bold;
 
 }
 
-li a:hover {
-  background-color: #9FA8DA;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+.navbar .navbar-nav a {
+    font-weight: bold;
+    color: white;
 }
+
+
 
 /*---------------------end of navigation bar*/
+
+/*--------------------- itinerary carousel*/
+.itinerary-title {
+    position: absolute;
+    color: #354b5e
+    top: 100px;
+    
+    
+}
+
+
+.container-itinerary {
+  position: absolute;
+  height: 300px;
+  width: 600px;
+  
+  left: calc(50% - 300px);
+  display: flex;
+}
+
+.card {
+  display: flex;
+  height: 280px;
+  width: 250px;
+  background-color: #cde2f4;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+/*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card:not(:first-child) {
+    margin-left: -50px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: #354b5e;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+
+
+/*--------------------- itinerary carousel*/
