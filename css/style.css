@@ -54,9 +54,8 @@ body {
 
 /*--------------------- itinerary carousel*/
 .itinerary-title {
-    position: relative;
     color: #354b5e;
-    top: 100px;
+    margin-top: 2rem;
 }
 
 
@@ -64,7 +63,6 @@ body {
   position: relative;
   height: 300px;
   width: 600px;
-  
   left: calc(50% - 300px);
   display: flex;
 }
@@ -76,7 +74,6 @@ body {
   background-color: #cde2f4;
   border-radius: 10px;
   box-shadow: -1rem 0 3rem #000;
-/*   margin-left: -50px; */
   transition: 0.4s ease-out;
   position: relative;
   left: 0px;
@@ -105,10 +102,13 @@ body {
   top: 15px;
 }
 
+.text {
+text-align: center;
+}
+
 
 
 /*--------------------- itinerary carousel*/
-
 /* Quotes */
 
 .reviews .page-header {
@@ -118,7 +118,7 @@ body {
 /* ----------------------------------------Footer */
 
 footer {
-    background-color: #354b5e;git commit -m "-"
+    background-color: #354b5e;
     color: #fafafa;
     min-height: 120px;
     margin: 0;
