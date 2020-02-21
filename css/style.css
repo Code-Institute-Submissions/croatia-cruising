@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
-
+* {margin: 0; padding: 0}
 /*----------------------- header*/
 
 head {
@@ -11,7 +11,6 @@ body {
   line-height: 1.8;
   color: #333;
   display: block;
-  padding: 10px 20px 75px 20px;
   
 
 }
@@ -52,13 +51,16 @@ body {
 
 /*---------------------end of navigation bar*/
 
+
+
+
 /*--------------------- itinerary carousel*/
 .itinerary-title {
     color: #354b5e;
     margin-top: 2rem;
 }
 
-
+@media screen and (max-width: 600px){
 .container-itinerary {
   position: relative;
   height: 300px;
@@ -67,20 +69,35 @@ body {
   display: flex;
 }
 
+.row {
+    padding: 15px;
+}
+
+
+
 .card {
   display: flex;
-  height: 280px;
-  width: 250px;
+  height: 300px;
+  width: 200;
   background-color: #cde2f4;
   border-radius: 10px;
   box-shadow: -1rem 0 3rem #000;
   transition: 0.4s ease-out;
   position: relative;
   left: 0px;
+  text-align: center;
 }
 
+@media screen and (max-width: 600px){
+    .card {
+        width: 100%;
+        height: 100px
+    }
+
+@media screen and (max-width: 600px){
 .card:not(:first-child) {
     margin-left: -50px;
+}
 }
 
 .card:hover {
@@ -88,12 +105,15 @@ body {
   transition: 0.4s ease-out;
 }
 
+@media screen and (max-width: 600px){
 .card:hover ~ .card {
   position: relative;
   left: 50px;
   transition: 0.4s ease-out;
 }
+}
 
+@media screen and (max-width: 600px){
 .title {
   color: #354b5e;
   font-weight: 300;
@@ -101,20 +121,34 @@ body {
   left: 20px;
   top: 15px;
 }
+}
 
 .text {
 text-align: center;
 }
 
+.title {
+  text-align: center;  
+}
+
 
 
 /*--------------------- itinerary carousel*/
-/* Quotes */
+
+#map {
+    height: 500;
+    width: 100%;
+    background-color: grey;
+}
+
+/* reviews */
 
 .reviews .page-header {
     position: relative;
     margin-bottom: 25px;
 }
+
+
 /* ----------------------------------------Footer */
 
 footer {
@@ -124,7 +158,7 @@ footer {
     margin: 0;
 }
 
-.cv-pdf i {
+.brochure i {
     font-size: 18px;
     color: #fafafa;
     text-align: center;
@@ -132,8 +166,8 @@ footer {
     transition: all 0.35s ease-in-out;
 }
 
-.cv-pdf i:hover {
-    color: #e84610;
+.brochure i:hover {
+    color: #7fbff6;
 }
 
 .social-links {
@@ -151,13 +185,10 @@ footer {
     color: #fafafa;
     background: #8f8f8f;
     transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
 }
 
 .social-links li a i:hover {
-    background: #e84610;
+    background: #7fbff6;
 }
 
 #footer-details {
