@@ -22,9 +22,9 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav mr-auto">
         <li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a></li>
-        <li class="nav-item mr-2"><a class="nav-link" href="/itinerary">Itinerary</a>
+        <li class="nav-item mr-2"><a class="nav-link" href="#itinerary">Itinerary</a>
         </li>
-        <li class="nav-item mr-2"><a class="nav-link" href="/map">Map</a>
+        <li class="nav-item mr-2"><a class="nav-link" href="#map">Map</a>
         </li>
         <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="/login">Book now</a></li>
       </ul>
@@ -34,7 +34,7 @@
     </div>
   </nav>
   <!--Carousel taken from https://getbootstrap.com/docs/4.0/components/carousel-->
-  <div id="carouselExampleIndicators" class="carousel slide mt-0" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide mt-0" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -78,6 +78,7 @@
   </div>
   <!--End of Carousel-->
   <!--Itinerary-->
+  <div class="container-fluid itinerary-container">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -88,6 +89,7 @@
       </div>
     </div>
   </div>
+  <div id="itinerary">
   <div class="row">
     <div class="col-md-6 col-lg-4 col-xl-3">
       <h2>HVAR</h2>
@@ -96,12 +98,12 @@
     </div>
     <div class="col-md-6 col-lg-4 col-xl-3">
       <h2>VIS</h2>
-      <p>One of the most amazing blue grottos in the world</p>
+      <p>One of the most amazing blue grottos in the world, just a dip away</p>
       <p><a href="#" target="_blank" class="btn btn-info">Learn More &raquo;</a></p>
     </div>
     <div class="col-md-6 col-lg-4 col-xl-3">
       <h2>DUBROVNIK</h2>
-      <p>Treat yourself to a royal reception (not GoT style)</p>
+      <p>Treat yourself to a royal reception and enjoy the UNESCO heritage</p>
       <p><a href="#" target="_blank" class="btn btn-info">Learn More &raquo;</a></p>
     </div>
     <div class="col-md-6 col-lg-4 col-xl-3">
@@ -119,9 +121,12 @@
       <p>Enjoy the beautiful beaches and incredible nights out</p>
       <p><a href="#" target="_blank" class="btn btn-info">Learn More &raquo;</a></p>
     </div>
+    </div>
+  </div>
   </div>
   <!--end of Itinerary-->
   <!--map-->
+  <div class="container-fluid map-container">
   <div class="row">
     <div class="col-12 page-header">
       <h2 class="text-uppercase">Map</h2>
@@ -129,8 +134,9 @@
     </div>
   </div>
   <div id="map"></div>
+  </div>
   <!--Reviews-->
-  <div class="container-wrapper">
+  <div class="container-fluid container-wrapper">
     <div class="container quotes-container content-container">
       <section class="reviews">
         <div class="row">
@@ -145,7 +151,7 @@
               <div class="d-none d-sm-block">
                 <img src="images/young-man.jpg"
                      class="rounded-circle mr-3" height="100"
-                     width="100" alt="missing this">
+                     width="100" alt="Jack">
               </div>
               <div class="media-body" >
                 <blockquote class="blockquote">
@@ -161,7 +167,7 @@
               <div class="d-none d-sm-block">
                 <img src="images/young-woman.jpg"
                      class="rounded-circle mr-3" height="100"
-                     width="100" alt="missing this">
+                     width="100" alt="Julianne">
               </div>
               <div class="media-body">
                 <blockquote class="blockquote">
