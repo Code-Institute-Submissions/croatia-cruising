@@ -10,19 +10,6 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
 		type="text/css" />
 	<link rel="stylesheet" href="css/style.css">
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js">
-	</script>
-	<script type="text/javascript">
-		(function(){
-      emailjs.init("user_1aCHGbSePvHiJCqswLwAc");
-
-      var templateParams = {
-    name: 'Maja',
-    notes: 'I would like to inquire!'
-};
-      emailjs.send(gmail, croatia_cruising, templateParams);
-   })();
-	</script>
 	<title>Croatia Cruising</title>
 </head>
 
@@ -30,10 +17,8 @@
 	<!--Navigation inspired by the Whiskey drop project-->
 	<nav class="navbar navbar-dark navbar-expand-sm mt-0">
 		<a href="/" class="navbar-brand">Croatia Cruising</a>
-		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
-            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-            aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span></button>
+		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span></button>
 		<div class="collapse navbar-collapse" id="navbarNavDropdown">
 			<ul class="navbar-nav mr-auto">
 				<li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a></li>
@@ -46,7 +31,7 @@
 		</div>
 		<div class="d-none d-md-block">
 			<a href="/login" button class="btn" data-toggle="modal" data-target="#myModal">Send Inquiry
-		</button></a>
+			</a>
 		</div>
 		<!-- Modal -->
 		<div id="myModal" class="modal fade" role="dialog">
@@ -67,33 +52,30 @@
 
 							<div class="form-group">
 								<label for="name">
-                Name:</label>
-								<input type="text" class="form-control"
-            id="name" name="name"   required maxlength="50">
+                                    Name:</label>
+								<input type="text" class="form-control" id="name" name="name" required maxlength="50">
 
-        </div>
+                            </div>
 								<div class="form-group">
 									<label for="email">
-                Email:</label>
-									<input type="email" class="form-control"
-            id="email" name="email" required maxlength="50">
-        </div>
+                                    Email:</label>
+									<input type="email" class="form-control" id="email" name="email" required maxlength="50">
+                            </div>
 									<div class="form-group">
 										<label for="name">
-                Message:</label>
-										<textarea class="form-control" type="textarea" name="message"
-            id="message" placeholder="Your Message Here"
-            maxlength="6000" rows="7"></textarea>
+                                    Message:</label>
+										<textarea class="form-control" type="textarea" name="message" id="message" placeholder="Your Message Here" maxlength="6000" rows="7"></textarea>
 									</div>
-									<button type="submit" class="btn btn-lg btn-success btn-block" id="btnContactUs">Post It! →</button>
+									<form onsubmit="return sendMail(this);">
+										<button type="submit" class="btn btn-lg btn-success btn-block" id="btnContactUs">Send Inquiry</button>
+									</form>
 
 						</form>
 						<div id="success_message" style="width:100%; height:100%; display:none; ">
 							<h3>Sent your message successfully!</h3>
 						</div>
 						<div id="error_message" style="width:100%; height:100%; display:none; ">
-							<h3>Error</h3>
-							Sorry there was an error sending your form.
+							<h3>Error</h3> Sorry there was an error sending your form.
 
 						</div>
 					</div>
@@ -112,28 +94,24 @@
 		</ol>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img class="d-block w-100" src="images/half-underwater.jpg"
-             alt="Swim & Dive">
+				<img class="d-block w-100" src="images/half-underwater.jpg" alt="Swim & Dive">
 				<div class="carousel-caption d-none d-md-block">
 					<h5>SWIM & DIVE</h5>
 					<p>Experience the most amazing shades of blue!</p>
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img class="d-block w-100" src="images/rsz_dubrovnik1.jpg"
-             alt="Sightsee">
+				<img class="d-block w-100" src="images/rsz_dubrovnik1.jpg" alt="Sightsee">
 				<div class="carousel-caption d-none d-md-block">
 					<h5>SIGHTSEE</h5>
 					<p>Feel like royalty in Dubrovnik(King's Landing)</p>
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img class="d-block w-100" src="images/rsz_deckchairs.jpg"
-             alt="Chill">
+				<img class="d-block w-100" src="images/rsz_deckchairs.jpg" alt="Chill">
 				<div class="carousel-caption d-none d-md-block">
 					<h5>CHILL</h5>
-					<p>Relax on the deck of our boat and prepare for an
-						unforgettable night out!</p>
+					<p>Relax on the deck of our boat and prepare for an unforgettable night out!</p>
 				</div>
 			</div>
 			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -164,17 +142,20 @@
 				<div class="col-md-6 col-lg-4 col-xl-3">
 					<h2>HVAR</h2>
 					<p>Enjoy the beautiful beaches and incredible nights out</p>
-					<p><a href="https://www.visit-hvar.com/" target="_blank" class="btn btn-info">Learn More &raquo;</a></p>
+					<p><a href="https://www.visit-hvar.com/" target="_blank" class="btn btn-info">Learn More &raquo;</a>
+					</p>
 				</div>
 				<div class="col-md-6 col-lg-4 col-xl-3">
 					<h2>VIS</h2>
 					<p>One of the most amazing blue grottos in the world, just a dip away</p>
-					<p><a href="https://www.lonelyplanet.com/croatia/vis-island" target="_blank" class="btn btn-info">Learn More &raquo;</a></p>
+					<p><a href="https://www.lonelyplanet.com/croatia/vis-island" target="_blank"
+							class="btn btn-info">Learn More &raquo;</a></p>
 				</div>
 				<div class="col-md-6 col-lg-4 col-xl-3">
 					<h2>DUBROVNIK</h2>
 					<p>Treat yourself to a royal reception and enjoy the UNESCO heritage</p>
-					<p><a href="https://www.lonelyplanet.com/croatia/dubrovnik" target="_blank" class="btn btn-info">Learn More &raquo;</a></p>
+					<p><a href="https://www.lonelyplanet.com/croatia/dubrovnik" target="_blank"
+							class="btn btn-info">Learn More &raquo;</a></p>
 				</div>
 				<div class="col-md-6 col-lg-4 col-xl-3">
 					<h2>MLJET</h2>
@@ -184,12 +165,14 @@
 				<div class="col-md-6 col-lg-4 col-xl-3">
 					<h2>MAKARSKA</h2>
 					<p>Amazing sunsets and clubs in caves are there for you to discover</p>
-					<p><a href="https://www.lonelyplanet.com/croatia/makarska" target="_blank" class="btn btn-info">Learn More &raquo;</a></p>
+					<p><a href="https://www.lonelyplanet.com/croatia/makarska" target="_blank"
+							class="btn btn-info">Learn More &raquo;</a></p>
 				</div>
 				<div class="col-md-6 col-lg-4 col-xl-3">
 					<h2>SPLIT</h2>
 					<p>Enjoy the beautiful beaches and incredible nights out</p>
-					<p><a href="https://www.lonelyplanet.com/croatia/dalmatia/split" target="_blank" class="btn btn-info">Learn More &raquo;</a></p>
+					<p><a href="https://www.lonelyplanet.com/croatia/dalmatia/split" target="_blank"
+							class="btn btn-info">Learn More &raquo;</a></p>
 				</div>
 			</div>
 		</div>
@@ -219,15 +202,13 @@
 					<div class="col-12 col-md-6">
 						<div class="media">
 							<div class="d-none d-sm-block">
-								<img src="images/young-man.jpg"
-                     class="rounded-circle mr-3" height="100"
-                     width="100" alt="Jack">
-              </div>
+								<img src="images/young-man.jpg" class="rounded-circle mr-3" height="100" width="100" alt="Jack">
+                            </div>
 								<div class="media-body">
 									<blockquote class="blockquote">
-										<p>Best holiday ever! I'm coming back next
-											year!!!!.</p>
-										<p>- Jack, 25, New York</p>
+										<p>Best holiday ever! I'm coming back next year!!!!.
+										</p>
+										<p>Jack, 25, New York</p>
 									</blockquote>
 								</div>
 							</div>
@@ -235,15 +216,13 @@
 						<div class="col-12 col-md-6">
 							<div class="media">
 								<div class="d-none d-sm-block">
-									<img src="images/young-woman.jpg"
-                     class="rounded-circle mr-3" height="100"
-                     width="100" alt="Julianne">
-              </div>
+									<img src="images/young-woman.jpg" class="rounded-circle mr-3" height="100" width="100" alt="Julianne">
+                            </div>
 									<div class="media-body">
 										<blockquote class="blockquote">
-											<p>Had an amazing time with my friends! We felt
-												so relaxed and saw amazing places</p>
-											<p>- Julianne, 27, Paris</p>
+											<p>Had an amazing time with my friends! We felt so relaxed and saw amazing
+												places</p>
+											<p>Julianne, 27, Paris</p>
 										</blockquote>
 									</div>
 								</div>
@@ -259,9 +238,8 @@
 			<div class="col-sm-4">
 				<p class="inline-block">
 					Copyright Maja Jercic
-					<br>
-          For educational purposes only
-        </p>
+					<br> For educational purposes only
+                </p>
 			</div>
 			<div class="col-sm-4">
 				<p class="inline-block">
@@ -297,6 +275,7 @@
 			</div>
 		</div>
 	</footer>
+    
 	<!--End of footer-->
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -310,7 +289,22 @@
 	</script>
 	<script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBMCzj0XPtN3pqRsNlyWpohjEK29kRv4E"></script>
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+		(function() {
+            emailjs.init("user_1aCHGbSePvHiJCqswLwAc");
+
+            var templateParams = {
+                name: 'Maja',
+                notes: 'I would like to inquire!'
+            };
+            emailjs.send(gmail, croatia_cruising, templateParams);
+        })();
+	</script>
 	<script src="myscripts.js"></script>
+    <script src="sendEmail.js"></script>
 </body>
 
 </html>
