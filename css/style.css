@@ -170,16 +170,7 @@ footer {
   left: calc(50% - 300px);
   display: flex;
 }
-}
 
-@media screen and (max-width: 600px){
-    .row {
-        width: 100%;
-        height: 100px
-    }
-}
-
-@media screen and (max-width: 600px){
 .row:not(:first-child) {
     margin-left: -50px;
 }
